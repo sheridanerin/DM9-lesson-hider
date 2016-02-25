@@ -5,6 +5,14 @@ angular.module('directivePractice')
 		$scope.test = 'Two way data binding!';
 
 		$scope.announceDay= function(lesson, day) {
-			alert(lesson + ' is active on ' + day + '.');
+			if (day === undefined) {
+				alert('this lesson is not currently scheduled.');
+			} else {
+				alert(lesson + ' is active on ' + day + '.');
+			}
 		};
+
+		$scope.toggleStrickThrough = function() {
+			
+		}
 });

@@ -16,12 +16,12 @@ angular.module('directivePractice')
 					scope.schedule = response.data;
 
 					scope.schedule.forEach(function( scheduleDay ) {
-					if (scheduleDay.lesson === scope.lesson) {
-						element.css('text-decoration', 'line-through');
-						scope.lessonDay = scheduleDay.weekday;
-						console.log(scope.lessonDay);
-						return;
-					}
+						if (scheduleDay.lesson === scope.lesson) {
+							element.css('text-decoration', 'line-through');
+							scope.lessonDay = scheduleDay.weekday;
+							console.log(scope.lessonDay);
+							return;
+						}
 					});
 				})
 			}
